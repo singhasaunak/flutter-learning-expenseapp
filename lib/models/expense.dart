@@ -8,10 +8,10 @@ final dateFormatter = DateFormat.yMd();
 enum ExpenseCategory { work, entertainment, food, travel }
 
 const expenseCategoryIcons = {
-  ExpenseCategory.food: Icon(Icons.dinner_dining),
-  ExpenseCategory.work: Icon(Icons.work),
-  ExpenseCategory.travel: Icon(Icons.airport_shuttle),
-  ExpenseCategory.entertainment: Icon(Icons.celebration),
+  ExpenseCategory.food: Icons.dinner_dining,
+  ExpenseCategory.work: Icons.work,
+  ExpenseCategory.travel: Icons.airport_shuttle,
+  ExpenseCategory.entertainment: Icons.celebration,
 };
 
 class Expense {

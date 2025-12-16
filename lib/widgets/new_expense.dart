@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning_expenseapp/models/expense.dart';
 
@@ -58,6 +57,8 @@ class _NewExpenseState extends State<NewExpense> {
       return;
     }
 
+    print(_pickedCategory);
+
     widget.onAddNewExpense(
       Expense(
         expenseName: _expenseNameInputController.text,
@@ -81,7 +82,7 @@ class _NewExpenseState extends State<NewExpense> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16, 48, 16, 16),
       child: Column(
         children: [
           TextField(

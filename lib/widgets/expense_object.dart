@@ -25,7 +25,7 @@ class ExpenseObject extends StatelessWidget {
                 Spacer(),
                 Row(
                   children: [
-                    Icon(Icons.work),
+                    Icon(expenseCategoryIcons[expense.expenseCategory]),
                     SizedBox(width: 8),
                     Text(expense.getFormattedDate),
                   ],

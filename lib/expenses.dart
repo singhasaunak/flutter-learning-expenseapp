@@ -32,6 +32,12 @@ class _ExpensesState extends State<Expenses> {
     });
   }
 
+  void _removeExpense(Expense expense) {
+    setState(() {
+      expenses.remove(expense);
+    });
+  }
+
   void _onAddExpense() {
     showModalBottomSheet(
       isScrollControlled: true,
@@ -47,7 +53,10 @@ class _ExpensesState extends State<Expenses> {
         title: Text("Expense Tracker"),
         actions: [IconButton(onPressed: _onAddExpense, icon: Icon(Icons.add))],
       ),
-      body: ExpenseList(expensesList: expenses),
+      body: ExpenseList(
+        expensesList: expenses,
+        onRemoveExpense: _removeExpense,
+      ),
     );
   }
 }
