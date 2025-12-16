@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning_expenseapp/models/expense.dart';
 
 class NewExpense extends StatefulWidget {
-  const NewExpense({Key? key, required this.onAddNewExpense}) : super(key: key);
+  const NewExpense({super.key, required this.onAddNewExpense});
 
   final void Function(Expense expense) onAddNewExpense;
 
@@ -66,6 +66,8 @@ class _NewExpenseState extends State<NewExpense> {
         expenseCategory: _pickedCategory,
       ),
     );
+
+    Navigator.pop(context);
   }
 
   @override
